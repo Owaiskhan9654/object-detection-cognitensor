@@ -6,6 +6,8 @@ itsdangerous==1.1.0
 Jinja2==2.11.2
 MarkupSafe==1.1.1
 numpy==1.18.5
+mkl-random==1.1.1
+mkl-service==2.3.0
 opencv-python==4.4.0.46
 Werkzeug==1.0.1
 wincertstore==0.2
