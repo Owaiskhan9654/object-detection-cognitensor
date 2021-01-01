@@ -1,5 +1,6 @@
 
 
+
 from flask import Flask, render_template, request
 import base64
 import numpy as np
@@ -57,7 +58,7 @@ def output():
     COLORS = np.random.randint(0, 255, size=(len(LABELS), 3),
                                dtype="uint8")
     # derive the paths to the YOLO weights and model configuration
-    weightsPath = "object_modules/yolov3-tiny.weights"
+    weightsPath = "object_modules/yolov3.weights"
     configPath = "object_modules/yolov3.cfg"
     # load our YOLO object detector trained on COCO dataset (80 classes)
     net = cv2.dnn.readNetFromDarknet(configPath, weightsPath)
@@ -144,4 +145,5 @@ def output():
     return render_template('object_output.html', imgval=imgval)
 
 if __name__ == '__main__':
-    app.run(debug=True, use_reloader=True)
+    app.run(debug=True)
+    
