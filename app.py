@@ -144,4 +144,4 @@ def output():
     return render_template('object_output.html', imgval=imgval)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, use_reloader=True)
